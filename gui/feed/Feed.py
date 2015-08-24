@@ -20,10 +20,13 @@ class Feed():
         self.entries = [Entry(item) for item in items]
         #checked update every time
         #compare last_link, if diff update link and last_updated
-        #actual check higher up
         self.last_updated = datetime.utcnow()
         self.last_checked = self.last_updated
         self.last_link = None if len(self.entries) == 0 else self.entries[0]
 
     def get_last(self):
         return self.entries[0]
+
+    def check():
+        #check for update here...
+        pass
